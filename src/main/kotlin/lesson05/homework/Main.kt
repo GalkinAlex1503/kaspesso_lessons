@@ -57,49 +57,49 @@ class Schedule {
             }.joinToString("\n\n")
     }
 
-    operator fun invoke(f: Schedule.() -> Unit) {
-        f(this)
+    operator fun invoke(func: Schedule.() -> Unit) {
+        func(this)
     }
 
-    fun monday(f: Schedule.() -> Unit) {
+    fun monday(func: Schedule.() -> Unit) {
         currentDay = Days.MONDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
-    fun tuesday(f: Schedule.() -> Unit) {
+    fun tuesday(func: Schedule.() -> Unit) {
         currentDay = Days.TUESDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
-    fun wednesday(f: Schedule.() -> Unit) {
+    fun wednesday(func: Schedule.() -> Unit) {
         currentDay = Days.WEDNESDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
-    fun thursday(f: Schedule.() -> Unit) {
+    fun thursday(func: Schedule.() -> Unit) {
         currentDay = Days.THURSDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
-    fun friday(f: Schedule.() -> Unit) {
+    fun friday(func: Schedule.() -> Unit) {
         currentDay = Days.FRIDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
-    fun saturday(f: Schedule.() -> Unit) {
+    fun saturday(func: Schedule.() -> Unit) {
         currentDay = Days.SATURDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
-    fun sunday(f: Schedule.() -> Unit) {
+    fun sunday(func: Schedule.() -> Unit) {
         currentDay = Days.SUNDAY
-        f(this)
+        func(this)
         currentDay = null
     }
 
